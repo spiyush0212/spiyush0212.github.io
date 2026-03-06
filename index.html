@@ -1,142 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Piyush Sharma | Portfolio</title>
+
+<title>Piyush Sharma</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter, sans-serif;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#0f172a;
-    color:white;
+overflow-y:hidden;
+background:#05070b;
+color:#e6edf3;
 }
 
-header{
-    text-align:center;
-    padding:80px 20px;
+/* horizontal world */
+
+.world{
+display:flex;
+width:600vw;
+height:100vh;
 }
 
-header h1{
-    font-size:48px;
+/* sections */
+
+.section{
+width:100vw;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+padding:80px;
+text-align:center;
 }
 
-header p{
-    font-size:20px;
-    opacity:0.8;
-}
+/* typography */
 
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 20px;
-    background:#3b82f6;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-}
-
-section{
-    max-width:900px;
-    margin:auto;
-    padding:60px 20px;
+h1{
+font-size:48px;
+font-weight:600;
+letter-spacing:-1px;
 }
 
 h2{
-    border-bottom:2px solid #3b82f6;
-    display:inline-block;
-    padding-bottom:5px;
+font-size:32px;
+margin-bottom:20px;
+color:#58f6ff;
+}
+
+p{
+font-size:18px;
+max-width:520px;
+opacity:.85;
+line-height:1.6;
+}
+
+/* environments */
+
+.intro{
+background:linear-gradient(135deg,#05070b,#0b1120);
+}
+
+.thinking{
+background:#0b1120;
+}
+
+.code{
+background:#070c18;
+font-family:monospace;
+}
+
+.systems{
+background:#111827;
 }
 
 .projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    margin-top:20px;
+background:#0b1120;
+}
+
+.contact{
+background:#05070b;
+}
+
+/* code block */
+
+.code pre{
+margin-top:30px;
+background:#020617;
+padding:24px;
+border-radius:10px;
+font-size:14px;
+color:#67e8f9;
+}
+
+/* project cards */
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:40px;
+width:100%;
+max-width:700px;
 }
 
 .card{
-    background:#1e293b;
-    padding:20px;
-    border-radius:8px;
+background:#020617;
+padding:20px;
+border-radius:10px;
+transition:.25s;
+border:1px solid #1f2937;
 }
 
-footer{
-    text-align:center;
-    padding:40px;
-    opacity:0.7;
+.card:hover{
+transform:translateY(-4px);
+border-color:#67e8f9;
+}
+
+.card h3{
+font-size:18px;
+margin-bottom:8px;
+color:#f472b6;
+}
+
+.card p{
+font-size:14px;
+opacity:.7;
+}
+
+/* contact */
+
+.contact a{
+margin-top:20px;
+color:#58f6ff;
+text-decoration:none;
+font-size:18px;
+}
+
+/* hint */
+
+.scroll-hint{
+margin-top:20px;
+font-size:14px;
+opacity:.6;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header>
+<div class="world">
+
+<!-- INTRO -->
+
+<section class="section intro">
+
 <h1>Piyush Sharma</h1>
-<p>Software Developer | Problem Solver</p>
 
-<a class="btn" href="https://www.linkedin.com/in/spiyush0212/" target="_blank">
-View LinkedIn
-</a>
+<p>Software Engineer exploring systems, algorithms, and scalable architecture.</p>
 
-</header>
+<div class="scroll-hint">scroll →</div>
 
-<section>
+</section>
 
-<h2>About Me</h2>
+<!-- THINKING -->
+
+<section class="section thinking">
+
+<h2>How I Think</h2>
+
 <p>
-Hi, I'm Piyush Sharma.  
-I am passionate about building software, solving problems, and learning new technologies.
+I enjoy breaking complex problems into simple systems.  
+Good software is not just code — it's architecture, performance, and clarity.
 </p>
 
 </section>
 
-<section>
+<!-- CODE -->
+
+<section class="section code">
+
+<h2>Code Mindset</h2>
+
+<pre>
+while(problem_exists){
+
+  analyze();
+  design();
+  build();
+  improve();
+
+}
+</pre>
+
+</section>
+
+<!-- SYSTEMS -->
+
+<section class="section systems">
+
+<h2>Systems I Build</h2>
+
+<p>
+Backend APIs, distributed services, and algorithm-driven applications designed for reliability and scale.
+</p>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section class="section projects">
 
 <h2>Projects</h2>
 
-<div class="projects">
+<div class="projects-grid">
 
 <div class="card">
-<h3>Project One</h3>
-<p>Description of your project.</p>
+<h3>Realtime Chat</h3>
+<p>WebSocket messaging platform.</p>
 </div>
 
 <div class="card">
-<h3>Project Two</h3>
-<p>Description of your project.</p>
+<h3>Distributed Cache</h3>
+<p>Reduced backend latency by 40%.</p>
 </div>
 
 <div class="card">
-<h3>Project Three</h3>
-<p>Description of your project.</p>
+<h3>Algorithm Visualizer</h3>
+<p>Interactive algorithm learning tool.</p>
 </div>
 
 </div>
 
 </section>
 
-<section>
+<!-- CONTACT -->
+
+<section class="section contact">
 
 <h2>Contact</h2>
 
-<p>
-LinkedIn:  
+<p>Let's build something interesting together.</p>
+
 <a href="https://www.linkedin.com/in/spiyush0212/" target="_blank">
-linkedin.com/in/spiyush0212
+LinkedIn
 </a>
-</p>
 
 </section>
 
-<footer>
+</div>
 
-© 2026 Piyush Sharma
+<script>
 
-</footer>
+/* vertical scroll → horizontal */
+
+window.addEventListener("wheel", e => {
+
+window.scrollBy({
+left: e.deltaY,
+behavior:"smooth"
+})
+
+})
+
+</script>
 
 </body>
 </html>
