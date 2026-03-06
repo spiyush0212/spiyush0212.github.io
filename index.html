@@ -265,16 +265,20 @@ LinkedIn
 
 <script>
 
-/* vertical scroll → horizontal */
+const world = document.querySelector(".world");
 
-window.addEventListener("wheel", e => {
+/* make page height equal to horizontal width */
+document.body.style.height = world.scrollWidth - window.innerWidth + window.innerHeight + "px";
 
-window.scrollBy({
-left: e.deltaY,
-behavior:"smooth"
-})
+/* sync vertical scroll → horizontal movement */
 
-})
+window.addEventListener("scroll", () => {
+
+const scrollTop = window.scrollY;
+
+world.style.transform = `translateX(-${scrollTop}px)`;
+
+});
 
 </script>
 
